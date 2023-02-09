@@ -1,0 +1,8 @@
+{
+  "@hook-tf-github-repository-title": "Github Repository",
+  "@hook-tf-github-repository-description": "Provisions a Github repository in your institution's Github organization based on a template",
+  "@hook-tf-github-repository-create-workspace": "Create Github Repository",
+  "@hook-tf-github-repository-repository-name": "Repository Name",
+  "@hook-tf-github-repository-workspace-default-location": "Workspace still provisioning, please wait.",
+  "@hook-tf-github-repository-label-description": "Description"
+}

@@ -1,0 +1,6 @@
+sailsWorkingDir
+.terraform
+*.tfstate*
+.terragrunt-cache
+.tmp
+node_modules/

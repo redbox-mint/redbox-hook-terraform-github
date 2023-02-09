@@ -1,0 +1,50 @@
+{
+  "name": "@researchdatabox/redbox-hook-terraform-github",
+  "version": "1.1.4",
+  "description": "A plugin to provision Github repositories using ReDBox's Terraform provisioner",
+  "main": "index.js",
+  "author": "",
+  "sails": {
+    "isHook": true,
+    "hookName": "redbox-hook-terraform-github"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:redbox-mint/redbox-hook-terraform-github.git"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test node_modules/.bin/mocha",
+    "installHook": "docker run -v $(pwd):/opt/sailshook qcifengineering/redbox-portal /bin/bash -c 'cd /opt/redbox-portal;yarn add  \"file:/opt/sailshook\"'; docker commit $(docker ps -lq) redboxportalwithhook",
+    "runDev": "docker-compose -f support/development/docker-compose.yml up",
+    "runAngularDev": "docker-compose -f support/development/docker-compose.yml up | source support/development/monitorSailsWorkingDir.sh sailsWorkingDir"
+  },
+  "keywords": [
+    "sails",
+    "hook",
+    "redbox",
+    "redbox research",
+    "terraform",
+    "redbox provisioner"
+  ],
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@researchdatabox/redbox-core-types": "^1.1.1",
+    "@types/node": "^18.13.0",
+    "js-terraform": "0.0.1",
+    "mocha": "^5.1.1",
+    "rxjs": "^6.6.2",
+    "rxjs-compat": "^6.6.7",
+    "sails": "^1.0.2",
+    "stream": "^0.0.2",
+    "supertest": "^3.0.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.10",
+    "path-exists": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
